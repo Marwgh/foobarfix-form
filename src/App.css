@@ -121,7 +121,7 @@ span {
   pointer-events: none;
   filter: grayscale(100%);
 }
-.notinStock span{
+.notinStock span {
   color: black;
   position: absolute;
   font-size: 15vw;
@@ -657,6 +657,20 @@ input::placeholder {
   font-size: 3.5vw;
 }
 
+.thankYou {
+  background-color: #0b2626;
+  width: 100vw;
+  height: 100vh;
+  z-index: 500;
+  position: absolute;
+}
+
+.thankYou p {
+  text-align: center;
+  font-size: 4vw;
+  color: #e3b449;
+  margin-top: 20vw;
+}
 
 /* ERROR MESSAGES */
 
@@ -666,8 +680,9 @@ input::placeholder {
   height: 2vw;
   margin-top: 28vw;
   margin-left: -14vw;
-  color:#f00;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f00;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 0.8vw;
 }
 
@@ -677,8 +692,9 @@ input::placeholder {
   height: 2vw;
   margin-top: 21.5vw;
   margin-left: -14vw;
-  color:#f00;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f00;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 0.8vw;
   z-index: 10;
 }
@@ -689,8 +705,9 @@ input::placeholder {
   height: 2vw;
   margin-top: -0.5vw;
   margin-left: -13vw;
-  color:#f00;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #f00;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 0.8vw;
   z-index: 10;
 }
@@ -701,7 +718,7 @@ input::placeholder {
 
 /* Screen sizes */
 @media only screen and (max-width: 1100px) and (min-width: 750px) {
-  .notinStock span{
+  .notinStock span {
     font-size: 20vw;
     transform: translate(1.3vw, -10vw);
   }
@@ -899,7 +916,7 @@ input::placeholder {
 
 @media only screen and (max-width: 749px) {
   /* Welcome */
-  .notinStock span{
+  .notinStock span {
     font-size: 60vw;
     transform: translate(2vw, -30vw);
   }
