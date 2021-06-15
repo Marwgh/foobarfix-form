@@ -2,13 +2,22 @@ import CreditCardInput from 'react-credit-card-input';
 
 export default function Pmethod (props) {
     console.log(props.methodP);
+
+    function removePayER() {
+    if (document.querySelector("#namePayment").value) {
+
+        document.querySelector("#paymentER").classList.add("hideER");
+        }
+    }
+    
+
     if(props.methodP==="Credit card") {
         return (
             <div className="paymentInformation ">
                 <h1>Payment Information</h1>
                 <div>
                     <label className="paymentLabel"  htmlFor="namePayment" >Full Name </label>
-                    <input id="namePayment" type="text" name="cardname" placeholder="Jhon Doe" required></input>
+                    <input id="namePayment" type="text" name="cardname" placeholder="John Doe" onKeyPress={removePayER} required ></input>
                 </div>
                 <div >
                 <label className="paymentLabel">Card Information </label>

@@ -37,6 +37,10 @@ export default function Basket(props) {
         }
     }
     
+    if (cartItems.length > 0) {
+        document.querySelector("#basketER").classList.add("hideER");
+    }
+
     return (
         <section className="cart">
             <div className="items">

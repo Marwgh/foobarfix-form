@@ -256,8 +256,10 @@ function Fieldset (props) {
     if (validity) {
       console.log("Valid - Proceed with order");
       props.Clicked();
+      // document.querySelector("#tableER").classList.add(".hide");
     } else {
       console.log("Invalid");
+      document.querySelector("#tableER").classList.remove("hideER");
     }
   }
   
@@ -277,6 +279,7 @@ function Fieldset (props) {
       props.Clicked();
     } else {
       console.log("Invalid");
+      document.querySelector("#basketER").classList.remove("hideER");
     }
   }
   
@@ -288,6 +291,12 @@ function Fieldset (props) {
     const cvcins =document.querySelector("#cvc").value
     //let validity2 = creditcardins.checkValidity();
     console.log(form.elements.cardname.value);
+
+        if (document.querySelector("#namePayment").value) {
+
+        document.querySelector("#paymentER").classList.add("hideER");
+        }
+    
 
     if (validity) {
       if(creditcardins.length < 15){
@@ -308,6 +317,7 @@ function Fieldset (props) {
     } else {
      
       console.log("Invalid");
+      document.querySelector("#paymentER").classList.remove("hideER");
     }
   } 
 
@@ -319,6 +329,7 @@ function Fieldset (props) {
     return (
       <div>
         <Tables phoneClass={"phoneTable"} selectedT={props.selectedT} setSelectedT={props.setSelectedT} />
+        <span className="hideER" id="tableER">*please select a table first</span>
         <button onClick={checkValidityPart1} type="button" className="Button">Proceed with order</button>
       </div>
       )
@@ -332,12 +343,14 @@ function Fieldset (props) {
           <Basket  setExtras={props.setExtras} setTotalPrice={props.setTotalPrice} onAdd ={onAdd} onRemove= {onRemove} cartItems={cartItems}/>
             {/* <Ordering /> */}
           <button onClick={CheckValidityPart2} type="button" className="Button">Payment</button>
+          <span className="hideER" id="basketER">*please add an item to your cart</span>
         </div>
     )
   }else{
     return( 
       <div>
         <Payment  extras={props.extras} totalPrice={props.totalPrice} cartItems={cartItems} />
+        <span className="hideER" id="paymentER">*incorrect payment information inserted</span>
         <button type="button" className="Button" onClick={CheckValidityPart3}>Pay</button>
       </div>
     )
