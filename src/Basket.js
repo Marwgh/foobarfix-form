@@ -43,12 +43,12 @@ export default function Basket(props) {
 
     return (
         <section className="cart">
-            <div className="items">
-                <h1>ORDER</h1>
+            <div id="items">
+                <h1>YOUR ORDER</h1>
                 <img alt="this is a cart" className="icon" src="./cart.png"></img>
-            </div>
-            <div className="emptyTitle">
+                <div className="emptyTitle">
                 {cartItems.length === 0 && <div>Order is empty</div>}
+            </div>
             </div>
             <div className="itemsHolder">
                 {cartItems.map((item) => (

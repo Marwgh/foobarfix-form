@@ -1,9 +1,5 @@
 export default function Tables(props) {
-    // $("input[type='radio'][name='table']:checked").value;
-    // const t = document.querySelector('input[name="table"]:checked').value;
-    // console.log(t);
-    // if (t == "0") {
-    // }
+   
     function removeER() {
         document.querySelector("#tableER").classList.add("hideER");
     }
