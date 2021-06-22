@@ -292,10 +292,6 @@ function Fieldset (props) {
     //let validity2 = creditcardins.checkValidity();
     console.log(form.elements.cardname.value);
 
-        if (document.querySelector("#namePayment").value) {
-
-        document.querySelector("#paymentER").classList.add("hideER");
-        }
     
 
     if (validity) {
@@ -330,7 +326,7 @@ function Fieldset (props) {
       <div>
         <Tables phoneClass={"phoneTable"} selectedT={props.selectedT} setSelectedT={props.setSelectedT} />
         <span className="hideER" id="tableER">*please select a table first</span>
-        <button onClick={checkValidityPart1} type="button" className="Button">Proceed with order</button>
+        <button onClick={checkValidityPart1} type="button" className="Button">Next</button>
       </div>
       )
   }else if (props.amount === 2){

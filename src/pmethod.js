@@ -30,7 +30,7 @@ export default function Pmethod (props) {
     }else if(props.methodP==="cash") {
         return (
             <div id="cashPaying">
-                <p>Please go the to the counter to pay, we will call you when order is ready .</p>
+                <p>We are not able to offer cash payment at the moment.</p>
             </div>
         )
     }else  {

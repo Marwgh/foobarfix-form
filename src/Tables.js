@@ -10,7 +10,7 @@ export default function Tables(props) {
 
     return (
       <fieldset id="FieldsetPart1" className={`Form ${props.phoneClass}`}>
-          <p className="TablesOrder">Ready to order</p>
+          <p className="TablesOrder">Ready to order?</p>
           <p className="TablesHeader">Select your table:</p>
           <section className="Tables">
             <div className="TablesGrid">
