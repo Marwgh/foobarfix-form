@@ -306,6 +306,12 @@ function Fieldset (props) {
           }else{
             console.log("Valid - Pay"); 
           props.dataSending(form.elements.cardname.value);
+          const thanksScreen = document.createElement("div");
+          const thanksText = document.createElement("p");
+          thanksText.textContent = "Thank you for ordering!";
+          thanksScreen.classList.add("thankYou");
+          thanksScreen.appendChild(thanksText);
+          document.querySelector("body").appendChild(thanksScreen);
           }
         }
       }
